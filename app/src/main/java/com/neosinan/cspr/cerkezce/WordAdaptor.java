@@ -35,6 +35,10 @@ public class WordAdaptor extends ArrayAdapter<Word> {
         super(familyActivity, 0 ,numberArrayList);
     }
 
+    public WordAdaptor(PhrasesActivity phrasesActivity, ArrayList<Word> numberArrayList) {
+        super(phrasesActivity,0, numberArrayList);
+    }
+
 
     @Override
     public View getView(int position,  View convertView,  ViewGroup parent) {
