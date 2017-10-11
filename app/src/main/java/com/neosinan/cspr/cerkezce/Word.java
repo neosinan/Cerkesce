@@ -21,8 +21,7 @@ public class Word {
     }
 
 
-    public String getCerkezceTranslation() {
-        return mCerkezceTranslation;
+    public String getCerkezceTranslation() { return mCerkezceTranslation;
     }
 
 

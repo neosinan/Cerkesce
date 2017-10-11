@@ -27,6 +27,14 @@ public class WordAdaptor extends ArrayAdapter<Word> {
         super(numbersActivity,0,numberArrayList);
     }
 
+    public WordAdaptor(ColorsActivity colorsActivity, ArrayList<Word> numberArrayList) {
+        super(colorsActivity, 0,numberArrayList);
+    }
+
+    public WordAdaptor(FamilyActivity familyActivity, ArrayList<Word> numberArrayList) {
+        super(familyActivity, 0 ,numberArrayList);
+    }
+
 
     @Override
     public View getView(int position,  View convertView,  ViewGroup parent) {
