@@ -12,7 +12,7 @@ public class ColorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colors);
-
+        setTitle(R.string.sayılar);
         ArrayList<Word> numberArrayList = new ArrayList<Word>();
 
         //Here We add new Word to our Word Array

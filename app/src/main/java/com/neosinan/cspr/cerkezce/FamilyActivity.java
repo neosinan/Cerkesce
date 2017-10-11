@@ -11,6 +11,7 @@ public class FamilyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.aile);
         setContentView(R.layout.activity_family);
         ArrayList<Word> numberArrayList = new ArrayList<Word>();
 
