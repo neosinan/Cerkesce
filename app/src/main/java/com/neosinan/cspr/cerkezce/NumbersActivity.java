@@ -22,16 +22,17 @@ public class NumbersActivity extends AppCompatActivity {
         ArrayList<Word> numberArrayList = new ArrayList<Word>();
 
         //Here We add new Word to our Word Array
-        numberArrayList.add(new Word("Bir","Tzı"));
-        numberArrayList.add(new Word("İki","T’qu"));
-        numberArrayList.add(new Word("Üç","Şı"));
-        numberArrayList.add(new Word("Dört","P’lı"));
-        numberArrayList.add(new Word("Beş","Tfı"));
-        numberArrayList.add(new Word("Altı","hı"));
-        numberArrayList.add(new Word("Yedi","Blı"));
-        numberArrayList.add(new Word("Sekiz","Yı"));
-        numberArrayList.add(new Word("Dokuz","Bğu"));
-        numberArrayList.add(new Word("On","P'cı"));
+        //ToDo(7) Bütün Sayı Resimleri bulunacak, eklenecek ve id leri burada düzeltilecek.
+        numberArrayList.add(new Word("Bir","Tzı",R.drawable.number_one));
+        numberArrayList.add(new Word("İki","T’qu",R.drawable.number_two));
+        numberArrayList.add(new Word("Üç","Şı",R.drawable.number_three));
+        numberArrayList.add(new Word("Dört","P’lı",R.drawable.number_four));
+        numberArrayList.add(new Word("Beş","Tfı",R.drawable.number_five));
+        numberArrayList.add(new Word("Altı","hı",R.drawable.number_six));
+        numberArrayList.add(new Word("Yedi","Blı",R.drawable.number_seven));
+        numberArrayList.add(new Word("Sekiz","Yı",R.drawable.number_eight));
+        numberArrayList.add(new Word("Dokuz","Bğu",R.drawable.number_nine));
+        numberArrayList.add(new Word("On","P'cı",R.drawable.number_ten));
 
 
        WordAdaptor itemsAdapter = new WordAdaptor(this, numberArrayList);
