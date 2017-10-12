@@ -19,7 +19,7 @@ public class FamilyActivity extends AppCompatActivity {
         numberArrayList.add(new Word("Anne", "nan, nane, sinane ",R.drawable.family_mother));
         numberArrayList.add(new Word("Baba", "tı, siyate ",R.drawable.family_father));
         numberArrayList.add(new Word("Eş (Bayan)", "şuzı ",R.drawable.family_mother));
-        numberArrayList.add(new Word("Eş (Bay)", "l'ı",R.drawable.family_mother));
+        numberArrayList.add(new Word("Eş (Bay)", "l'ı",R.drawable.family_father));
         numberArrayList.add(new Word("kızkardeş", "şiph'u nahıç, sişuph'u nahıç ",R.drawable.family_younger_sister));
         numberArrayList.add(new Word("erkek kardeş", "şınahıç, sişnahıç ",R.drawable.family_younger_brother));
         numberArrayList.add(new Word("kız çocuğu", "pşaşe,pşaşejiy",R.drawable.family_daughter));

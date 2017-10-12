@@ -6,13 +6,15 @@ import android.graphics.Bitmap;
  * Created by cspr on 11.10.2017.
  */
 
+
 public class Word {
     //Cerkezce çevirilecek kelime
     private String mCerkezceTranslation;
     //Default Dildeki kelime
     private String mDefaultTranslation;
     //Kelimlerin Resim karşığı
-    private int mDefaultImage;
+    private int mDefaultImage=HAS_NO_IMAGE;
+    private final static int HAS_NO_IMAGE=-1;
 
     //Image  kullanan class instanceları için constractor.
     public Word(String defaultTranslation, String cerkezceTranslation, int defaultImage){
@@ -34,8 +36,9 @@ public class Word {
         return mDefaultTranslation;
     }
 
-
     public String getCerkezceTranslation() { return mCerkezceTranslation;}
 
-
+    public boolean hasImage(){
+       return mDefaultImage!=HAS_NO_IMAGE;
+    }
 }

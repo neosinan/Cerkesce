@@ -4,6 +4,7 @@
     android:id="@+id/phrases"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#FFFF00"
     android:layout_height="match_parent"
     tools:context="com.neosinan.cspr.cerkezce.PhrasesActivity">
 

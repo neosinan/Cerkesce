@@ -66,9 +66,16 @@ public class WordAdaptor extends ArrayAdapter<Word> {
         // set this text on the number TextView
         numberTextView.setText(currentWord.getDefaultTranslation());
 
+        //finding imageview and if necasry filling with appropriate image
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image_view);
+        if(currentWord.hasImage()){
+            imageView.setImageResource(currentWord.getmDefaultImage());
+            imageView.setVisibility(View.VISIBLE);
+        }else {
+            imageView.setVisibility(View.GONE);
+        }
 
-        imageView.setImageResource(currentWord.getmDefaultImage());
+
 
         return listItemView;
     }
