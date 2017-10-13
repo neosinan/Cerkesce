@@ -37,16 +37,16 @@ public class NumbersActivity extends AppCompatActivity {
         numberArrayList.add(new Word("Sekiz","Yı",R.drawable.number_eight,R.raw.sekiz));
         numberArrayList.add(new Word("Dokuz","Bğu",R.drawable.number_nine,R.raw.dokuz));
         numberArrayList.add(new Word("On","P'cı",R.drawable.number_ten,R.raw.on));
-        numberArrayList.add(new Word("Onbir" ,"pşıkuz ",R.drawable.number_one,R.raw.onbir));
-        numberArrayList.add(new Word("Onİki","pşıkut ",R.drawable.number_two,R.raw.oniki));
-        numberArrayList.add(new Word("OnÜç","pşıkuş ",R.drawable.number_three,R.raw.onuc));
-        numberArrayList.add(new Word("OnDört","pşıkupl ",R.drawable.number_four,R.raw.ondort));
-        numberArrayList.add(new Word("OnBeş","pşıkutf ",R.drawable.number_five,R.raw.onbes));
-        numberArrayList.add(new Word("OnAltı","pşıkuhı ",R.drawable.number_six,R.raw.onalti));
-        numberArrayList.add(new Word("OnYedi","pşıkubl",R.drawable.number_seven,R.raw.onyedi));
-        numberArrayList.add(new Word("OnSekiz","pşıkuyi",R.drawable.number_eight,R.raw.onsekiz));
-        numberArrayList.add(new Word("OnDokuz","pşıkubğu",R.drawable.number_nine,R.raw.ondokuz));
-        numberArrayList.add(new Word("Yirdmi","toçı ",R.drawable.number_ten,R.raw.yirmi));
+        numberArrayList.add(new Word("Onbir" ,"pşıkuz ",R.drawable.number_eleven,R.raw.onbir));
+        numberArrayList.add(new Word("Onİki","pşıkut ",R.drawable.number_twelve,R.raw.oniki));
+        numberArrayList.add(new Word("OnÜç","pşıkuş ",R.drawable.number_thirteen,R.raw.onuc));
+        numberArrayList.add(new Word("OnDört","pşıkupl ",R.drawable.number_fourteen,R.raw.ondort));
+        numberArrayList.add(new Word("OnBeş","pşıkutf ",R.drawable.number_fifteen,R.raw.onbes));
+        numberArrayList.add(new Word("OnAltı","pşıkuhı ",R.drawable.number_sixteen,R.raw.onalti));
+        numberArrayList.add(new Word("OnYedi","pşıkubl",R.drawable.number_seventeen,R.raw.onyedi));
+        numberArrayList.add(new Word("OnSekiz","pşıkuyi",R.drawable.number_eighteen,R.raw.onsekiz));
+        numberArrayList.add(new Word("OnDokuz","pşıkubğu",R.drawable.number_nineteen,R.raw.ondokuz));
+        numberArrayList.add(new Word("Yirmi","toçı ",R.drawable.number_twenty,R.raw.yirmi));
 
        WordAdaptor itemsAdapter = new WordAdaptor(this, numberArrayList);
 
