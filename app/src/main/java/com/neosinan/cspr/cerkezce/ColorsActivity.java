@@ -1,7 +1,10 @@
 package com.neosinan.cspr.cerkezce;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -27,9 +30,18 @@ public class ColorsActivity extends AppCompatActivity {
 
         WordAdaptor itemsAdapter = new WordAdaptor(this, numberArrayList);
 
-        ListView listView = (ListView) findViewById(R.id.colors);
+        final ListView listView = (ListView) findViewById(R.id.colors);
 
         listView.setAdapter(itemsAdapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {//here we create OnClickListener for every item in list
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //MediaPlayer mediaPlayer = MediaPlayer.create(ColorsActivity.this,R.raw.bir); //Here we create a mediaplayer object listen to word
+                //mediaPlayer.start();
+            }
+        });
 
     }
 }

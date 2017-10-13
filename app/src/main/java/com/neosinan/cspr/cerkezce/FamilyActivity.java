@@ -2,6 +2,8 @@ package com.neosinan.cspr.cerkezce;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -37,5 +39,13 @@ public class FamilyActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.family);
 
         listView.setAdapter(itemsAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {//here we create OnClickListener for every item in list
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //MediaPlayer mediaPlayer = MediaPlayer.create(FamilyActivity.this,R.raw.bir); //Here we create a mediaplayer object listen to word
+                //mediaPlayer.start();
+            }
+        });
     }
 }
