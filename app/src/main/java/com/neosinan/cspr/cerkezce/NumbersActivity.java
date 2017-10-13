@@ -11,13 +11,30 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
 public class NumbersActivity extends AppCompatActivity {
+    MediaPlayer mediaPlayer;
+    int pausedTime;
+    int position=0;
 
+    //Creating One OnComplationListiner stop us creating unncessary number of instances of this object We use this every time to release mediaplayer
+    private MediaPlayer.OnCompletionListener onCompletionListener =new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            if (mediaPlayer!=null){
+                try {
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                }catch (Exception e){}
+
+            }
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,10 +75,59 @@ public class NumbersActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Word words = numberArrayList.get(i);//This is how find position of listview item
-                MediaPlayer mediaPlayer = MediaPlayer.create(NumbersActivity.this,words.getmCerkezPronounciation()); //Here we create a mediaplayer object listen to word
+                if (mediaPlayer!=null){
+                    try {
+                        releaseMediaplayer();
+                    }catch (Exception e){}
+
+                }
+                mediaPlayer = MediaPlayer.create(NumbersActivity.this,words.getmCerkezPronounciation()); //Here we create a mediaplayer object listen to word
                 mediaPlayer.start();
+                mediaPlayer.setOnCompletionListener(onCompletionListener);
+                position=words.getmCerkezPronounciation();
             }
         });
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        pausedTime=mediaPlayer.getCurrentPosition();
+        mediaPlayer.pause();
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (!(pausedTime==0)){
+            try {
+                mediaPlayer = MediaPlayer.create(NumbersActivity.this,position); //Here we create a mediaplayer object listen to word
+                mediaPlayer.seekTo(pausedTime);
+                mediaPlayer.start();
+            }catch (Exception e){}
+
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaplayer();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        releaseMediaplayer();
+    }
+    public void releaseMediaplayer(){
+        if (mediaPlayer!=null){
+            try {
+                mediaPlayer.release();
+                mediaPlayer=null;
+            }catch (Exception e){}
+
+        }
     }
 }
