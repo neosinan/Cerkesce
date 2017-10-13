@@ -29,9 +29,7 @@ public class NumbersActivity extends AppCompatActivity {
             if (mediaPlayer!=null){
                 try {
                     mediaPlayer.release();
-                    mediaPlayer=null;
                 }catch (Exception e){}
-
             }
         }
     };
@@ -66,20 +64,17 @@ public class NumbersActivity extends AppCompatActivity {
         numberArrayList.add(new Word("Yirmi","toçı ",R.drawable.number_twenty,R.raw.yirmi));
 
        WordAdaptor itemsAdapter = new WordAdaptor(this, numberArrayList);
-
-        final ListView listView = (ListView) findViewById(R.id.rootView);
-
+       final ListView listView = (ListView) findViewById(R.id.rootView);
        listView.setAdapter(itemsAdapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {//here we create OnClickListener for every item in list
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+       listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {//here we create OnClickListener for every item in list
+           @Override
+           public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Word words = numberArrayList.get(i);//This is how find position of listview item
                 if (mediaPlayer!=null){
                     try {
                         releaseMediaplayer();
                     }catch (Exception e){}
-
                 }
                 mediaPlayer = MediaPlayer.create(NumbersActivity.this,words.getmCerkezPronounciation()); //Here we create a mediaplayer object listen to word
                 mediaPlayer.start();
@@ -88,15 +83,12 @@ public class NumbersActivity extends AppCompatActivity {
             }
         });
     }
-
     @Override
     protected void onPause() {
         super.onPause();
         pausedTime=mediaPlayer.getCurrentPosition();
         mediaPlayer.pause();
-
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -106,16 +98,13 @@ public class NumbersActivity extends AppCompatActivity {
                 mediaPlayer.seekTo(pausedTime);
                 mediaPlayer.start();
             }catch (Exception e){}
-
         }
     }
-
     @Override
     protected void onStop() {
         super.onStop();
         releaseMediaplayer();
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -127,7 +116,6 @@ public class NumbersActivity extends AppCompatActivity {
                 mediaPlayer.release();
                 mediaPlayer=null;
             }catch (Exception e){}
-
         }
     }
 }
