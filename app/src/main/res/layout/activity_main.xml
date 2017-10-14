@@ -9,6 +9,7 @@
 
     <TextView
         android:id="@+id/numbers"
+        android:textColor="@android:color/background_dark"
         android:background="@color/category_numbers"
         android:text="@string/sayılar"
         style="@style/CategoryStyle"/>

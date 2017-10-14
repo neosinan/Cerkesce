@@ -130,8 +130,11 @@ public class NumbersActivity extends AppCompatActivity {
     }
 
     protected void mediaOnPause(){
-        pausedTime=mediaPlayer.getCurrentPosition();
-        mediaPlayer.pause();
+        if (mediaPlayer!=null){
+            pausedTime=mediaPlayer.getCurrentPosition();
+            mediaPlayer.pause();
+        }
+
     }
 
     @Override
