@@ -8,6 +8,8 @@ import android.graphics.Bitmap;
 
 
 public class Word {
+
+    private  int mCerkezPronounciation;
     //Cerkezce çevirilecek kelime
     private String mCerkezceTranslation;
     //Default Dildeki kelime
@@ -17,7 +19,22 @@ public class Word {
 
     private final static int HAS_NO_IMAGE=-1;
 
-    private  int mCerkezPronounciation;
+    private int mPlayImage=HAS_NO_IMAGE_PLAY;//gerektiği yerdeki play image
+
+    //Kelimlerin Resim karşığı
+
+    private final static int HAS_NO_IMAGE_PLAY=-1;
+
+
+
+    //Ses kullan klaslar için construtor
+    public Word(String defaultTranslation, String cerkezceTranslation, int defaultImage, int cerkezPronounciation,int playImage){
+        mDefaultTranslation=defaultTranslation;
+        mCerkezceTranslation=cerkezceTranslation;
+        mDefaultImage = defaultImage;
+        mCerkezPronounciation= cerkezPronounciation;
+        mPlayImage=playImage;
+    }
 
     //Ses kullan klaslar için construtor
     public Word(String defaultTranslation, String cerkezceTranslation, int defaultImage, int cerkezPronounciation){
@@ -55,4 +72,8 @@ public class Word {
     public boolean hasImage(){
        return mDefaultImage!=HAS_NO_IMAGE;
     }
+
+    public int getmPlayImage(){return mPlayImage;}
+
+    public boolean hasPlayImage(){return mPlayImage!=HAS_NO_IMAGE_PLAY;}
 }

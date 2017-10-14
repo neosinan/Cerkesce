@@ -75,6 +75,17 @@ public class WordAdaptor extends ArrayAdapter<Word> {
             imageView.setVisibility(View.GONE);
         }
 
+        //finding play imageview and if necasry filling with appropriate image
+        ImageView play_image = (ImageView) listItemView.findViewById(R.id.play_pic);
+        if(currentWord.hasPlayImage()){
+            play_image.setImageResource(currentWord.getmPlayImage());
+            play_image.setVisibility(View.VISIBLE);
+        }else {
+            play_image.setVisibility(View.GONE);
+        }
+
+
+
 
 
         return listItemView;
