@@ -7,26 +7,51 @@
     android:layout_height="match_parent"
     tools:context="com.neosinan.cspr.cerkezce.MainActivity">
 
-    <TextView
-        android:id="@+id/numbers"
-        android:textColor="@android:color/background_dark"
-        android:background="@color/category_numbers"
-        android:text="@string/sayılar"
-        style="@style/CategoryStyle"/>
-    <TextView
-        android:id="@+id/family"
-        android:background="@color/category_family"
-        android:text="@string/aile"
-        style="@style/CategoryStyle"/>
-    <TextView
-        android:id="@+id/color"
-        android:background="@color/category_colors"
-        android:text="@string/renkler"
-        style="@style/CategoryStyle"/>
-    <TextView
-        android:id="@+id/phrases"
-        android:background="@color/category_phrases"
-        android:text="@string/kalıplar"
-        style="@style/CategoryStyle"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_numbers">
+        <TextView
+            android:id="@+id/numbers"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/sayılar"
+            style="@style/CategoryStyle"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_family">
+        <TextView
+            android:id="@+id/family"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/aile"
+            style="@style/CategoryStyle"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_colors">
+        <TextView
+            android:id="@+id/color"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/renkler"
+            style="@style/CategoryStyle"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_phrases">
+
+        <TextView
+            android:id="@+id/phrases"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/kalıplar"
+            style="@style/CategoryStyle"/>
+    </FrameLayout>
+
+
+
+
 
 </LinearLayout>

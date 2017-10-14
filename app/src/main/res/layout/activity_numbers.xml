@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#40C4FF"
+    android:drawSelectorOnTop="true"
     tools:context="com.neosinan.cspr.cerkezce.NumbersActivity">
 
 </ListView>
