@@ -124,8 +124,9 @@ public class NumbersActivity extends AppCompatActivity {
     }
     @Override
     protected void onPause() {
-        super.onPause();
         mediaOnPause();
+        super.onPause();
+
     }
 
     protected void mediaOnPause(){
@@ -151,13 +152,15 @@ public class NumbersActivity extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        super.onStop();
         releaseMediaplayer();
+        super.onStop();
+
     }
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         releaseMediaplayer();
+        super.onDestroy();
+
     }
     public void releaseMediaplayer(){
         if (mediaPlayer!=null){
